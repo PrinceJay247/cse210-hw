@@ -48,6 +48,7 @@ class Program
         {
             Console.WriteLine("Don't give up! Try again next time.");
         }
+        Console.WriteLine(letter);
     }
     }
 }

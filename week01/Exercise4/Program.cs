@@ -30,7 +30,7 @@ class Program
 
         Console.WriteLine($"The sum is: {sum}");
 
-        int average = sum / numbers.Count;
+         double average= (double)sum / numbers.Count;
         Console.WriteLine($"The average is {average}");
 
          
