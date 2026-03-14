@@ -14,8 +14,7 @@ public class Journal
         "If I had one thing I could do over today, what would it be?"
     };
 
-    // Add a new entry with a random prompt
-    public void AddEntry()
+     public void AddEntry()
     {
         Random rnd = new Random();
         string prompt = _prompts[rnd.Next(_prompts.Count)];
@@ -27,8 +26,7 @@ public class Journal
         Console.WriteLine("Entry added!\n");
     }
 
-    // Display all entries
-    public void DisplayAll()
+     public void DisplayAll()
     {
         if (_entries.Count == 0)
         {
@@ -42,8 +40,7 @@ public class Journal
         }
     }
 
-    // Save entries to a file
-    public void SaveToFile(string filename)
+     public void SaveToFile(string filename)
     {
         using (StreamWriter outputFile = new StreamWriter(filename))
         {
@@ -55,8 +52,7 @@ public class Journal
         Console.WriteLine("Journal saved successfully!\n");
     }
 
-    // Load entries from a file (replace current journal)
-    public void LoadFromFile(string filename)
+     public void LoadFromFile(string filename)
     {
         if (!File.Exists(filename))
         {
