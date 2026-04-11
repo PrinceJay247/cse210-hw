@@ -1,15 +1,25 @@
-public class WritingAssignment : Assignment
-{
-    private string _title;
+using System;
 
-    public WritingAssignment(string studentName, string topic, string title)
-        : base(studentName, topic)
+class Program
+{
+    public class Employee
     {
-        _title = title;
+        private string salary  = "$100";
+
+        public float CalculatePay()
+        {
+            return salary;
+        }
     }
 
-    public string GetWritingInformation()
+    public class hourlyEmployee : Employee
     {
-        return $"{_title} by {GetStudentName()}";
+        private float rate = 9f;
+        private float hour = 100f;
+
+        public override float CalculatePay()
+        {
+            return rate*hour;
+        }
     }
 }
